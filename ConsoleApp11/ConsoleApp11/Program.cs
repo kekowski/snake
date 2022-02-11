@@ -69,9 +69,9 @@ namespace Snake
                 new string('x', _size.Width - 2).Write(1, i, ConsoleColor.Black, ConsoleColor.Black);
             }
 
-            _head.Write("O", ConsoleColor.Red, ConsoleColor.Black);
-            _tail.Write("o", ConsoleColor.Blue, ConsoleColor.Black);
-            _fruit.Write("*", ConsoleColor.Yellow, ConsoleColor.Black);
+            _head.Write("O", ConsoleColor.Green, ConsoleColor.Black);
+            _tail.Write("o", ConsoleColor.Red, ConsoleColor.Black);
+            _fruit.Write("*", ConsoleColor.Blue, ConsoleColor.Black);
 
             $"Punkty: {_tail.Count()}".Write(_size.Width + 3, 5);
         }
@@ -135,7 +135,6 @@ namespace Snake
 
             $"Nacisisnij spacje".Write(_size.Width + 3, 4, ConsoleColor.Black, ConsoleColor.Gray);
 
-
             if (Console.ReadKey(true).Key == ConsoleKey.Spacebar) { Start(); }
         }
 
@@ -150,7 +149,7 @@ namespace Snake
         }
     }
 
-    public static class Extensions
+    public static class cls2
     {
         public static void RemoveFirst<T>(this List<T> list)
         {
